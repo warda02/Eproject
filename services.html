@@ -1,0 +1,1043 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | StyleBoutique</title>
+  <style>
+    /* ==== GLOBAL STYLES ==== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      color: #333;
+      background-color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ==== HEADER ==== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #f8f8f8;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      color: #222;
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #e63946;
+    }
+
+    /* Mobile menu button */
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* ==== HERO ==== */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .hero a {
+      background-color: #e63946;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #d62828;
+    }
+
+    /* ==== SERVICES SECTION ==== */
+    .services {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .services h3 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #222;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service {
+      background: #fafafa;
+      padding: 30px 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .service h4 {
+      color: #e63946;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .service p {
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+    }
+
+    .service a {
+      color: #e63946;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s;
+      cursor: pointer;
+    }
+
+    .service a:hover {
+      border-color: #e63946;
+    }
+
+    /* ==== TESTIMONIAL ==== */
+    .testimonial {
+      background-color: #f8f8f8;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 10px;
+    }
+
+    .testimonial span {
+      display: block;
+      font-weight: 600;
+      color: #e63946;
+    }
+
+    /* ==== CTA ==== */
+    .cta {
+      text-align: center;
+      padding: 60px 20px;
+      background-color: #e63946;
+      color: #fff;
+    }
+
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      background-color: #fff;
+      color: #e63946;
+      padding: 12px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .cta a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      background-color: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #e63946;
+    }
+
+    /* ==== BACK TO TOP BUTTON ==== */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #e63946;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 99;
+    }
+
+    /* ==== RESPONSIVE ==== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px;
+      }
+      nav ul {
+        flex-direction: column;
+        display: none;
+        gap: 15px;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  ==== HEADER ====
+  <header>
+    <h1>StyleBoutique</h1>
+    <span class="menu-toggle">☰</span>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cart (<span id="cartCount">0</span>) 🛒</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  ==== HERO ====
+  <section class="hero" id="hero">
+    <h2>Style Made Simple</h2>
+    <p>Premium fashion and personalized services — delivered to your doorstep.</p>
+    <a href="#services">Explore Our Services</a>
+  </section>
+
+  ==== SERVICES ====
+  <section class="services" id="services">
+    <h3>Our Fashion Services</h3>
+    <div class="service-grid">
+      <div class="service">
+        <h4>👗 Personal Styling</h4>
+        <p>Let our experts curate outfits that match your personality and lifestyle.</p>
+        <a onclick="addToCart()">Book Session →</a>
+      </div>
+
+      <div class="service">
+        <h4>🚚 Fast & Free Delivery</h4>
+        <p>Enjoy free nationwide shipping on orders above $50 with real-time tracking.</p>
+        <a onclick="addToCart()">Learn More →</a>
+      </div>
+
+      <div class="service">
+        <h4>🔁 Easy Returns</h4>
+        <p>Return or exchange items within 15 days with our simple process.</p>
+        <a onclick="addToCart()">Start a Return →</a>
+      </div>
+
+      <div class="service">
+        <h4>🧵 Custom Tailoring</h4>
+        <p>Perfect fit guaranteed with our in-house tailoring service.</p>
+        <a onclick="addToCart()">Book Tailoring →</a>
+      </div>
+
+      <div class="service">
+        <h4>🎁 Gift Wrapping</h4>
+        <p>Send a thoughtful gift with premium wrapping and a personal note.</p>
+        <a onclick="addToCart()">Send a Gift →</a>
+      </div>
+    </div>
+  </section>
+
+  ==== TESTIMONIAL ====
+  <section class="testimonial">
+    <p>“The personal styling service helped me find my perfect look — amazing experience!”</p>
+    <span>— Sarah L., Verified Customer</span>
+  </section>
+
+  ==== CTA ====
+  <section class="cta">
+    <h3>Ready to Elevate Your Wardrobe?</h3>
+    <a href="#">Shop Now</a>
+  </section>
+
+  ==== FOOTER ====
+  <footer>
+    <p>© 2025 StyleBoutique. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  ==== BACK TO TOP BUTTON ====
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <script>
+    // === Responsive Menu Toggle ===
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    // === Shopping Cart Counter ===
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+      alert("Added to cart! Current items: " + cartCount);
+    }
+
+    // === Back to Top Button ===
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopBtn.style.display = "block";
+      } else {
+        backToTopBtn.style.display = "none";
+      }
+    };
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | StyleBoutique</title>
+
+  <style>
+    /* ===== GLOBAL RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      background: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    :root {
+      --primary: #e63946;
+      --secondary: #f1faee;
+      --dark: #1d3557;
+      --light: #ffffff;
+      --text-color: #333;
+      --bg-color: #ffffff;
+      --card-bg: #fafafa;
+    }
+
+    body.dark-mode {
+      --bg-color: #1a1a1a;
+      --text-color: #f5f5f5;
+      --card-bg: #2b2b2b;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    header.scrolled {
+      background: linear-gradient(90deg, var(--primary), #ff6b6b);
+      color: white;
+      transition: background 0.5s ease;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      color: var(--text-color);
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4)
+        ),
+        url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80')
+          center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+      animation: fadeIn 1.2s ease forwards;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .hero a {
+      background-color: var(--primary);
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero a:hover {
+      background-color: #d62828;
+    }
+
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 70px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .services h3 {
+      font-size: 2.3rem;
+      margin-bottom: 40px;
+      color: var(--text-color);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service {
+      background: var(--card-bg);
+      border-radius: 15px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.6s ease;
+    }
+
+    .service.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .service:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service h4 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .service p {
+      margin-bottom: 20px;
+    }
+
+    .service a {
+      color: var(--primary);
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+    }
+
+    .service a:hover {
+      border-color: var(--primary);
+    }
+
+    /* ===== TESTIMONIAL ===== */
+    .testimonial {
+      background: var(--secondary);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .testimonial p {
+      font-style: italic;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 15px;
+    }
+
+    .testimonial span {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    /* ===== CTA ===== */
+    .cta {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, var(--primary), #ff6b6b);
+      color: #fff;
+    }
+
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    .cta a {
+      background: #fff;
+      color: var(--primary);
+      padding: 14px 28px;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    .cta a:hover {
+      background: var(--secondary);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--dark);
+      color: #ddd;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--primary);
+    }
+
+    /* ===== BACK TO TOP BUTTON ===== */
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px 16px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+    }
+
+    /* ===== KEYFRAMES ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 15px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+        margin-top: 10px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero h2 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  ===== HEADER =====
+  <header>
+    <h1>StyleBoutique</h1>
+    <span class="menu-toggle">☰</span>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Cart (<span id="cartCount">0</span>) 🛒</a></li>
+      </ul>
+    </nav>
+    <button id="modeToggle" style="background:none;border:none;font-size:1.2rem;cursor:pointer;">🌙</button>
+  </header>
+
+  ===== HERO =====
+  <section class="hero" id="hero">
+    <h2>Style Made Simple</h2>
+    <p>Premium fashion and personalized services — delivered to your doorstep.</p>
+    <a href="#services">Explore Our Services</a>
+  </section>
+
+  ===== SERVICES =====
+  <section class="services" id="services">
+    <h3>Our Fashion Services</h3>
+    <div class="service-grid">
+      <div class="service"><h4>👗 Personal Styling</h4><p>Expert stylists curate outfits that match your lifestyle.</p><a onclick="addToCart()">Book Session →</a></div>
+      <div class="service"><h4>🚚 Fast & Free Delivery</h4><p>Free nationwide shipping on orders above $50.</p><a onclick="addToCart()">Learn More →</a></div>
+      <div class="service"><h4>🔁 Easy Returns</h4><p>Return or exchange items within 15 days hassle-free.</p><a onclick="addToCart()">Start a Return →</a></div>
+      <div class="service"><h4>🧵 Custom Tailoring</h4><p>Perfect fit guaranteed with our in-house tailoring.</p><a onclick="addToCart()">Book Tailoring →</a></div>
+      <div class="service"><h4>🎁 Gift Wrapping</h4><p>Send thoughtful gifts with premium wrapping & notes.</p><a onclick="addToCart()">Send a Gift →</a></div>
+    </div>
+  </section>
+
+  ===== TESTIMONIAL =====
+  <section class="testimonial">
+    <p>“The personal styling service helped me find my perfect look — amazing experience!”</p>
+    <span>— Sarah L., Verified Customer</span>
+  </section>
+
+  ===== CTA =====
+  <section class="cta">
+    <h3>Ready to Elevate Your Wardrobe?</h3>
+    <a href="#">Shop Now</a>
+  </section>
+
+  ===== FOOTER =====
+  <footer>
+    <p>© 2025 StyleBoutique. All Rights Reserved. | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  ===== BACK TO TOP BUTTON =====
+  <button id="backToTop" title="Go to top">↑</button>
+
+  <script>
+    // === Mobile Menu Toggle ===
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav ul");
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    // === Sticky Header Scroll Effect ===
+    const header = document.querySelector("header");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 80) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
+    });
+
+    // === Shopping Cart Counter ===
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      document.getElementById("cartCount").textContent = cartCount;
+    }
+
+    // === Dark/Light Mode Toggle ===
+    const modeToggle = document.getElementById("modeToggle");
+    modeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      modeToggle.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+    });
+
+    // === Scroll Reveal Animation ===
+    const services = document.querySelectorAll(".service");
+    function revealOnScroll() {
+      const trigger = window.innerHeight * 0.85;
+      services.forEach((service) => {
+        const top = service.getBoundingClientRect().top;
+        if (top < trigger) service.classList.add("visible");
+      });
+    }
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+
+    // === Back to Top Button ===
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 400 ? "block" : "none";
+    });
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StyleBoutique | Our Services</title>
+
+<style>
+/* ================= GLOBAL STYLES ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+
+:root {
+  --primary: #e63946;
+  --secondary: #f1faee;
+  --dark: #1d3557;
+  --light: #ffffff;
+  --bg: #ffffff;
+  --text: #222;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --card: #1e1e1e;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.4s, color 0.4s;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--light);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 60px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+header.scrolled { background: linear-gradient(90deg, var(--primary), #ff7b7b); color: #fff; }
+header h1 { font-size: 1.8rem; }
+nav ul { display: flex; list-style: none; gap: 25px; }
+nav ul li a { text-decoration: none; color: inherit; font-weight: 500; transition: color .3s; }
+nav ul li a:hover { color: var(--primary); }
+.menu { display: none; font-size: 1.8rem; cursor: pointer; }
+.toggle-mode { background: none; border: none; font-size: 1.3rem; cursor: pointer; }
+
+/* ================= HERO ================= */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), 
+  url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80') center/cover;
+  color: white; text-align: center; padding: 120px 20px;
+}
+.hero h2 { font-size: 3rem; margin-bottom: 15px; }
+.hero p { font-size: 1.2rem; margin-bottom: 30px; }
+.hero button {
+  background: var(--primary); border: none; color: white; 
+  padding: 12px 25px; border-radius: 30px; cursor: pointer;
+  font-size: 1rem; font-weight: 600;
+}
+.hero button:hover { background: #d62828; }
+
+/* ================= SERVICES ================= */
+.services { padding: 70px 20px; max-width: 1200px; margin: auto; text-align: center; }
+.services h3 { font-size: 2.2rem; margin-bottom: 40px; }
+.service-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;
+}
+.service {
+  background: var(--card, #fafafa);
+  padding: 25px; border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  opacity: 0; transform: translateY(40px);
+  transition: all .5s ease;
+}
+.service.visible { opacity: 1; transform: translateY(0); }
+.service:hover { transform: translateY(-8px) scale(1.03); }
+.service h4 { color: var(--primary); margin-bottom: 10px; }
+.service p { font-size: 0.95rem; margin-bottom: 20px; }
+.service button {
+  background: var(--primary); color: white; border: none;
+  padding: 10px 18px; border-radius: 20px; cursor: pointer;
+}
+.service button:hover { background: #d62828; }
+
+/* ================= MODAL POPUP ================= */
+.modal {
+  display: none; position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%; background: rgba(0,0,0,0.6);
+  justify-content: center; align-items: center; z-index: 999;
+}
+.modal-content {
+  background: var(--bg); color: var(--text);
+  padding: 30px; border-radius: 10px; width: 90%; max-width: 500px;
+  text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.modal-content h3 { color: var(--primary); margin-bottom: 10px; }
+.modal-content button {
+  background: var(--primary); border: none; color: white;
+  padding: 10px 20px; border-radius: 25px; margin-top: 15px; cursor: pointer;
+}
+
+/* ================= CTA ================= */
+.cta {
+  text-align: center; padding: 80px 20px;
+  background: linear-gradient(135deg, var(--primary), #ff7b7b);
+  color: #fff;
+}
+.cta h3 { font-size: 2rem; margin-bottom: 25px; }
+.cta a { background: #fff; color: var(--primary); padding: 14px 25px; border-radius: 25px; }
+
+/* ================= FOOTER ================= */
+footer { text-align: center; padding: 40px 20px; background: var(--dark); color: #ccc; }
+footer a { color: var(--primary); }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  header { flex-direction: column; }
+  nav ul { flex-direction: column; display: none; }
+  nav ul.active { display: flex; }
+  .menu { display: block; }
+  .hero h2 { font-size: 2.2rem; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h1>Niaz & Co.</h1>
+  <span class="menu">☰</span>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Shop</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Cart (<span id="cartCount">0</span>) 🛒</a></li>
+    </ul>
+  </nav>
+  <button class="toggle-mode" title="Toggle Dark Mode">🌙</button>
+</header>
+
+<section class="hero">
+  <h2>Style Made Simple</h2>
+  <p>Fashion-forward clothing with personalized service — delivered to you.</p>
+  <button onclick="scrollToServices()">Explore Services ↓</button>
+</section>
+
+<section class="services" id="services">
+  <h3>Our Fashion Services</h3>
+  <div class="service-grid">
+    <div class="service">
+      <h4>👗 Personal Styling</h4>
+      <p>Professional stylists help curate the perfect outfit.</p>
+      <button onclick="openModal('Personal Styling', 'Book your personalized session today!')">Learn More</button>
+    </div>
+    <div class="service">
+      <h4>🚚 Fast & Free Delivery</h4>
+      <p>Nationwide shipping with real-time tracking.</p>
+      <button onclick="openModal('Delivery', 'Enjoy fast and free delivery over $50!')">Learn More</button>
+    </div>
+    <div class="service">
+      <h4>🔁 Easy Returns</h4>
+      <p>Return or exchange items within 15 days hassle-free.</p>
+      <button onclick="openModal('Returns', 'Quick and easy return process for your convenience.')">Learn More</button>
+    </div>
+    <div class="service">
+      <h4>🧵 Custom Tailoring</h4>
+      <p>Perfect fit guaranteed with our tailoring experts.</p>
+      <button onclick="openModal('Tailoring', 'Book a fitting appointment for a custom look.')">Learn More</button>
+    </div>
+    <div class="service">
+      <h4>🎁 Gift Wrapping</h4>
+      <p>Elegant wrapping and personalized gift cards.</p>
+      <button onclick="openModal('Gift Wrapping', 'Make every gift special with our premium wrapping!')">Learn More</button>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h3>Upgrade Your Wardrobe Today!</h3>
+  <a href="#">Shop Now</a>
+</section>
+
+<footer>
+  <p>© 2025 StyleBoutique | All Rights Reserved</p>
+</footer>
+
+<!-- Modal -->
+<div class="modal" id="serviceModal">
+  <div class="modal-content">
+    <h3 id="modalTitle"></h3>
+    <p id="modalText"></p>
+    <button onclick="addToCart()">Add to Cart</button>
+    <button onclick="closeModal()">Close</button>
+  </div>
+</div>
+
+<script>
+// ============ MOBILE MENU ===============
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("nav ul");
+menu.addEventListener("click", () => nav.classList.toggle("active"));
+
+// ============ DARK / LIGHT MODE ===============
+const modeBtn = document.querySelector(".toggle-mode");
+if (localStorage.getItem("theme") === "dark") document.body.classList.add("dark");
+modeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+
+modeBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const mode = document.body.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("theme", mode);
+  modeBtn.textContent = mode === "dark" ? "☀️" : "🌙";
+});
+
+// ============ SCROLL TO SERVICES ===============
+function scrollToServices() {
+  document.getElementById("services").scrollIntoView({ behavior: "smooth" });
+}
+
+// ============ SCROLL REVEAL (Intersection Observer) ===============
+const services = document.querySelectorAll(".service");
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("visible");
+  });
+}, { threshold: 0.2 });
+services.forEach(s => observer.observe(s));
+
+// ============ HEADER SCROLL EFFECT ===============
+const header = document.querySelector("header");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 50);
+});
+
+// ============ MODAL SYSTEM ===============
+const modal = document.getElementById("serviceModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
+
+function openModal(title, text) {
+  modalTitle.textContent = title;
+  modalText.textContent = text;
+  modal.style.display = "flex";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// ============ CART SYSTEM ===============
+let cartCount = localStorage.getItem("cartCount") || 0;
+document.getElementById("cartCount").textContent = cartCount;
+
+function addToCart() {
+  cartCount++;
+  localStorage.setItem("cartCount", cartCount);
+  document.getElementById("cartCount").textContent = cartCount;
+  alert("Added to cart! Total items: " + cartCount);
+  closeModal();
+}
+</script>
+</body>
+</html>
